@@ -1,0 +1,66 @@
+<div class="form-wrapper">
+	<div class="row">
+		<div class="col-md-12">
+			<p class="app-title-status">{{appProfile.companyName}} - Application Status</p>
+			<a class="log-out">Log Out <i class="ion-log-out"></i></a>
+		</div>
+	</div>
+
+	<div class="app-info">
+		<div class="row center-text">
+			<div class="col-md-4">
+				<p class="title-status">Completed Form </p><i class="ion-ios7-checkmark status-icon icon-done"></i>
+			</div>
+			<div class="col-md-4">
+				<p class="title-status">10 Minute Call </p><i class="ion-ios7-circle-filled status-icon icon-doing"></i>
+			</div>
+			<div class="col-md-4">
+				<p class="title-status">Pending Result </p><i class="ion-ios7-circle-outline status-icon icon-to-to"></i>
+			</div>
+		</div>
+		<div class="row center-text">
+			<div class="col-md-4">
+			</div>
+			<div class="col-md-4">
+				<i class="ion-ios7-arrow-down arrow-down" ng-show="callPend"></i>
+			</div>
+			<div class="col-md-4">
+				<i class="ion-ios7-arrow-down arrow-down" ng-show="resultsPend"></i>
+			</div>
+		</div>
+		<div class="row center-text">
+			<div class="col-md-12">
+				<p class="app-title-status">Google Calendar API will go here to set up appointment</p>
+			</div>
+		</div>
+	</div>
+
+	<div class="row">
+		<div class="col-md-12">
+			<p class="app-title-status">Company Details</p>
+		</div>
+	</div>
+
+	<div class="app-info">
+		<div class="row">
+			<div class="col-md-5">
+				<ul>
+					<li><span class="contact-next-steps">Comapny Name:</span> {{appProfile.companyName}}</li>
+					<li><span class="contact-next-steps">Contact Name:</span> {{appProfile.firstName}} {{appProfile.lastName}}</li>
+					<li><span class="contact-next-steps">Contact Position:</span> {{appProfile.contactPosition}}</li>
+					<li><span class="contact-next-steps">Contact Email:</span> {{appProfile.email}}</li>
+					<li><span class="contact-next-steps">Contact Phone:</span> {{appProfile.contactPhone}}</li>
+				</ul>
+			</div>
+			<div class="col-md-7">
+				<ul>
+
+					<li><span class="contact-next-steps">Industries:</span> <span class="industry-status" ng-repeat="industry in appProfile.industryBucket">#{{industry}} </span></li>
+					<li><span class="contact-next-steps">Address:</span> {{appProfile.city}}, {{appProfile.state}}</li>
+					<li><span class="contact-next-steps">Business Discription:</span> {{appProfile.businessDeiscription}}</li>
+				</ul>
+			</div>
+		</div>
+	</div>
+	<a class="edit">Edit <i class="ion-gear-b"></i></a>
+</div>
